@@ -49,6 +49,13 @@ function calculate() {
   var sumDuration = 0;
   var sumProtectedDuration = 0;
   var ratioProtected = 0.0;
+  var percentageProtected = 0.0;
+  var result = 0.0;
+  var intermissions = 0;
+
+  var revenue = parseFloat(document.getElementById("revenue").value);
+
+  intermissions = parseInt(document.getElementById("intermissions").value);
 
   for (i=1; i<=lalalaTable.rows.length-1; i++) {
     var durationElemName = "duration_" + i;
@@ -62,9 +69,14 @@ function calculate() {
       }
     }
   }
-  ratioProtected = sumProtectedDuration / sumDuration * 100;
+
+  ratioProtected = sumProtectedDuration / (sumDuration + intermissions);
+  percentageProtected = ratioProtected * 100;
+
+  result = revenue * ratioProtected * 0.08;
 
   document.getElementById("sum_duration").value = sumDuration;
   document.getElementById("protected_duration").value = sumProtectedDuration;
-  document.getElementById("protected_ratio").value = ratioProtected.toFixed(2);
+  document.getElementById("protected_ratio").value = percentageProtected.toFixed(2);
+  document.getElementById("result").value = result.toFixed(2);
 }
