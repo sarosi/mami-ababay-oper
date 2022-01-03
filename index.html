@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mami ababay in obaba</title>
+  <script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>
+    Mami ababay in obaba
+  </h2>
+  <input type="button" value="+" onclick="addLalala();">
+  <input type="button" value="Calculate" onclick="calculate();">
+  <table id="lalalaTable">
+    <tr>
+      <td>Title</td>
+      <td>Author</td>
+      <td>Duration</td>
+      <td>Protected</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" id="title_1">
+      </td>
+      <td>
+        <input type="text" id="author_1">
+      </td>
+      <td>
+        <input type="text" id="duration_1" onchange="calculate()">
+      </td>
+      <td>
+        <input type="checkbox" id="protected_1" onchange="calculate()">
+      </td>
+    </tr>
+  </table>
+  <hr style="width:65%;text-align:left;margin-left:0">
+
+
+  <tr id="results">
+    <td>
+      Sum Duration = <input type="text" readonly=true id="sum_duration" class="input-output">min
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td>
+      Protected Duration = <input type="text" readonly=true id="protected_duration" class="input-output">min
+    </td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td>
+      Protected Ratio = <input type="text" readonly=true id="protected_ratio" class="input-output ratio">%
+    </td>
+  </tr>
+
+</body>
+
+</html>

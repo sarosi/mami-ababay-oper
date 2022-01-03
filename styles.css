@@ -1,0 +1,11 @@
+.input-output {
+  width: 1.7em;
+  border-width:0px;
+  border:none;
+  font-weight: bold;
+  text-align: right;
+}
+
+.ratio {
+  width: 3.1em;
+}
